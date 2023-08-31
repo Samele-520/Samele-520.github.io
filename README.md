@@ -1,78 +1,25 @@
-![](https://raw.githubusercontent.com/kkninjae/book/master/github/hero.png)
+# Halve  [![Donate](https://img.shields.io/badge/paypal-donate-blue.svg)](https://www.paypal.me/taylantatli/0usd)  
+  
+## `Sorry guys but there will be no update until I buy a new laptop.`
 
+This theme is Jekyll port of [vangeltzo.com](http://vangeltzo.com/) (by [Vangelis Tzortzis](https://github.com/srekoble)).
 
-# Book
+To learn how to install and use this theme check out the [installation guide](https://taylantatli.github.io/Halve/halve-theme/) for more information.
 
-Book, a simple and ready-to-use Jekyll theme. [Live](http://kkninjae.github.io/book/).
+If you have a question, find a bug, or just want to say hi, please open an [issue on GitHub](https://github.com/TaylanTatli/Halve/issues/new).
 
+## Preview   
+![screenshot of Halve](/images/halve-home-image.png)
 
-## How-to
+See a [live version of Halve](http://taylantatli.github.io/Halve) hosted on GitHub.
 
-*   [Setup](#setup)
-*   [Customization](#customization)
-*   [Writing Posts](#writing-posts)
-*   [Deploy to Github Page](#deploy-to-gh-pages)
+# Credits
+- Original Work: [Vangelis Tzortzis](https://github.com/srekoble)  
+- Sample Posts and some code examples: [Michael Rose](https://github.com/mmistakes/)
+- Images: [Unsplash](https://unsplash.com/) and [Lorem Pixel](http://lorempixel.com)
 
-
-### <a name="setup" id>Setup</a>
-
-```sh
-# get a copy of book source code
-$ git clone https://github.com/kkninjae/book.git
-
-# running site locally
-$ jekyll serve -w
-
-# from now, you should be able to start development or customization
-```
-
-
-### <a name="customization">Customization</a>
-
-Book is designed as simple as possible, but few changes can make your site uniq.
-You only need to change the values of keys in `_config.yml` file.
-
-*   Change site path: `baseurl`
-*   Give your site a name: `title`
-*   Make a site favicon: `favicon`
-*   Make a special home button image: `avatar`
-
-
-Last but not least
-
-*   If you are using Google analytics: `ga`
-*   If you are using Disqus commenting system: `disqus`
-
-
-### <a name="writing-posts">Writing Posts</a>
-
-Make a markdown file in `_posts` directory,
-follow [Jekyll post naming convention](https://jekyllrb.com/docs/posts/) to name your post,
-and put following front matter to the top of your post.
-You should be able to start to write your awesome post.
-Read this [POST](https://kkninjae.github.io/book/2015/08/28/how-to-use-book.html) to know more tips.
-
-```markdown
----
-title: Your awesome post title
-date: YYYY-MM-DD
----
-```
-
-
-### <a name="deploy-to-gh-pages">Deploy to Github Page</a>
-
-There is a deploying script built out of box.
-You need to install one more tool before using it which is [npm](https://www.npmjs.com/get-npm).
-This script will push your current static site to `gh-pages` branch.
-If there is no `gh-pages` branch yet, the script will create it for you.
-
-```sh
-# start to deploy your site to Github pages
-$ npm run deploy
-```
-
-
-## End.
-
-If you like this theme, why not give it a star. :)
+### Others
+- [Jekyll](http://jekyllrb.com/)
+- [jQuery](http://jquery.com/)
+- [Magnific Popup](http://dimsemenov.com/plugins/magnific-popup/)
+- [FitVids.JS](http://fitvidsjs.com/)
