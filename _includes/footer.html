@@ -1,33 +1,36 @@
-<footer>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-10 col-lg-offset-1 text-center">
-        <h4><strong>{{ site.owner }}</strong>
-        </h4>
-        <p>
-          {% for address in site.address %}
-          {{ address.line }}<br>
-          {% endfor %}
-        </p>
-        <ul class="list-unstyled">
-          <li><i class="fa fa-phone fa-fw"></i> {{ site.telephone }}</li>
-          <li><i class="fa fa-envelope-o fa-fw"></i>  <a href="mailto:{{ site.email }}">{{ site.email }}</a>
-          </li>
-        </ul>
-        <br>
-        <ul class="list-inline">
-          <li>
-            <a href="https://facebook.com/{{ site.facebook_username }}"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
-          </li>
-          <li>
-            <a href="https://twitter.com/{{ site.twitter_username }}"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
-          </li>
-          <li>
-            <a href="https://github.com/{{ site.github_username }}"><i class="fa fa-github fa-fw fa-3x"></i></a>
-          </li>
-        </ul>
-        <hr class="small">
-        <p class="text-muted">Copyright &copy; {{ site.copyright }} 20{{ site.time | date: '%y' }}</p>
+
+<footer class="footer py-4 js-page-footer">
+  <div class="main">
+
+    {%- assign _site_author = site.author -%}
+    {%- if _site_author.type == 'organization' -%}
+      {%- assign _site_author_itemtype = 'http://schema.org/Organization' -%}
+    {%- else -%}
+      {%- assign _site_author_itemtype = 'http://schema.org/Person' -%}
+    {%- endif -%}
+
+    <div itemscope itemtype="{{ _site_author_itemtype }}">
+      <meta itemprop="name" content="{{ _site_author.name }}">
+      {%- assign _site_author_url = _site_author.url | default: '/'-%}
+      {%- include snippets/get-nav-url.html path=_site_author_url -%}
+      {%- assign _site_author_url = __return -%}
+      <meta itemprop="url" content="{{ _site_author_url }}">
+      {%- if _site_author.bio -%}
+        <meta itemprop="description" content="{{ _site_author.bio }}">
+      {%- endif -%}
+      <div class="footer__author-links">
+        {%- include author-links.html author=_site_author -%}
+      </div>
+    </div>
+    {%- include snippets/get-locale-string.html key='COPYRIGHT_DATES' -%}
+    {%- assign _locale_copyright_dates = __return -%}
+    <div class="site-info mt-2">
+      <div>
+        {%- include snippets/get-locale-string.html key='COPYRIGHT_DATES' -%}
+        {%- assign _locale_copyright_dates = __return -%}
+        © {{ site.title }} {{ _locale_copyright_dates }},
+        Powered by <a title="Jekyll is a simple, blog-aware, static site generator." href="http://jekyllrb.com/">Jekyll</a> & <a
+        title="TeXt is a super customizable Jekyll theme." href="https://github.com/kitian616/jekyll-TeXt-theme">TeXt Theme</a>.
       </div>
     </div>
   </div>
